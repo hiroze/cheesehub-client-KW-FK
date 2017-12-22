@@ -1,8 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import CheeseList from './components/cheese-list';
+import registerServiceWorker from "./registerServiceWorker";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const data = ["Bath Blue", "Barkham Blue", "Buxton Blue"];
+
+ReactDOM.render(<CheeseList cheeses={data}/>, document.getElementById("root"));
 registerServiceWorker();
