@@ -13,7 +13,7 @@ const initialState = {
 
 //logic
 
-export default const cheeseReducer = (state = initialState, action) {
+export const cheeseReducer = (state = initialState, action) {
   //loading
   if (action.type === FETCH_CHEEESES_REQUEST) {
     return Object.assign({}, state, {
