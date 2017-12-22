@@ -1,4 +1,4 @@
-const API_BASE_URL = "/api";
+const API_BASE_URL = "https://peaceful-cliffs-10458.herokuapp.com/api/cheeses";
 
 export const FETCH_CHEEESES_REQUEST = "FETCH_CHEESES_REQUEST";
 export const fetchCheesesRequest = () => ({
@@ -19,7 +19,7 @@ export const fetchCheesesError = (error) => ({
 
 export const fetchCheeses = () => {
   return dispatch => {
-    fetch(`${API_BASE_URL}/api/cheeses`)
+    fetch(`${API_BASE_URL}`)
       .then(res => res.json())
       .then(cheese => dispatch(fetchCheesesSuccess(cheese)))
       .catch(err => fetchCheesesError(err));
