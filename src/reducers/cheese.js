@@ -1,9 +1,10 @@
-import {FETCH_CHEEESES_REQUEST,
+import {
+  FETCH_CHEEESES_REQUEST,
   fetchCheesesRequest, 
   FETCH_CHEEESES_SUCCESS,
   fetchCheesesSuccess, 
   FETCH_CHEEESES_ERROR, fetchCheesesError
-} from './actions/cheese'
+} from '../actions/cheese';
 
 const initialState = {
   cheeses: [],
@@ -11,10 +12,7 @@ const initialState = {
   error: null
 }
 
-//logic
-
-export const cheeseReducer = (state = initialState, action) {
-  //loading
+export const cheeseReducer = (state = initialState, action) => {
   if (action.type === FETCH_CHEEESES_REQUEST) {
     return Object.assign({}, state, {
       cheeses: [],
